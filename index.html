@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Black & Gold Performance Jersey | Cinematic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons for minimalistic icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- 1. HERO SECTION (SCROLL SEQUENCE) -->
+    <section class="hero-sequence-section" id="hero-sequence">
+        <div class="hero-sticky-container">
+            <canvas id="hero-canvas"></canvas>
+            
+            <div class="hero-bg-glow"></div>
+            
+            <div class="hero-text-overlay pos-top-left" id="text-frame-1">
+                <h1 class="hero-feature-title">AURA KICK</h1>
+                <p class="hero-feature-desc">Premium Athletic Fit. Designed to stand out.</p>
+            </div>
+
+            <div class="hero-text-overlay pos-middle-right" id="text-frame-2">
+                <h2 class="hero-feature-title">Engineered for Dominance</h2>
+                <p class="hero-feature-desc">Every thread crafted for performance.</p>
+            </div>
+            
+            <div class="hero-text-overlay pos-bottom-left" id="text-frame-3">
+                <h2 class="hero-feature-title">Unleash Your Potential</h2>
+                <p class="hero-feature-desc">With uncompromised agility.</p>
+            </div>
+
+            <div class="scroll-indicator" id="hero-scroll-indicator">
+                <div class="mouse"></div>
+                <p>Scroll to Explore</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SCROLL REVEAL SECTION -->
+    <section class="story-section">
+        <div class="story-container">
+            <h2 class="story-text" data-reveal>Built for performance.</h2>
+            <h2 class="story-text" data-reveal>Designed for dominance.</h2>
+            <h2 class="story-text highlight" data-reveal>Crafted for you.</h2>
+        </div>
+    </section>
+
+    <!-- 3. FEATURE BREAKDOWN (APPLE STYLE) -->
+    <section class="features-breakdown">
+        <!-- Feature 1 -->
+        <div class="feature-panel">
+            <div class="feature-text" data-reveal="left">
+                <h3 class="feature-title">Engineered<br>Fabric.</h3>
+                <p class="feature-desc">Micro-mesh ventilation actively pulls heat away from your core, ensuring you stay cool when the pressure is highest.</p>
+            </div>
+            <div class="feature-visual" data-reveal="right">
+                <div class="visual-glow"></div>
+                <img src="assets/hero_jersey_1777633598053.png" alt="Fabric Detail" style="transform: scale(1.5) translate(-10%, 10%);">
+            </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-panel reverse">
+            <div class="feature-text" data-reveal="right">
+                <h3 class="feature-title">Athletic<br>Fit.</h3>
+                <p class="feature-desc">Tailored to move with your body. Zero restriction, maximum agility. The perfect balance between tight and loose.</p>
+            </div>
+            <div class="feature-visual" data-reveal="left">
+                <img src="assets/showcase_jersey_back_1777633704738.png" alt="Fit Detail" style="transform: scale(1.2);">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. INTERACTIVE DETAIL SECTION (STICKY) -->
+    <section class="sticky-detail-section">
+        <div class="sticky-container">
+            <div class="sticky-visual">
+                <img src="assets/hero_jersey_1777633598053.png" alt="Jersey Sticky" id="sticky-jersey">
+            </div>
+            <div class="sticky-content">
+                <div class="sticky-item">
+                    <h4>Gold Accents</h4>
+                    <p>Metallic finish that catches the light.</p>
+                </div>
+                <div class="sticky-item">
+                    <h4>Seamless Stitching</h4>
+                    <p>No chafing. Pure comfort for 90 minutes.</p>
+                </div>
+                <div class="sticky-item">
+                    <h4>Aero-Dynamic</h4>
+                    <p>Wind-tunnel tested silhouette.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PRICE + VALUE SECTION -->
+    <section class="price-section">
+        <div class="price-container" data-reveal>
+            <h2 class="price-label">The ultimate upgrade for</h2>
+            <div class="price-display">₹<span id="price-counter">0</span></div>
+            
+            <div class="value-props">
+                <div class="value-item"><i data-lucide="check-circle"></i> Premium Fabric</div>
+                <div class="value-item"><i data-lucide="check-circle"></i> Custom Print</div>
+                <div class="value-item"><i data-lucide="check-circle"></i> Pro Finish</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CUSTOMIZATION EXPERIENCE -->
+    <section class="customization-section">
+        <div class="custom-container" data-reveal>
+            <h2 class="section-heading">Make It Yours</h2>
+            <div class="custom-layout">
+                <div class="custom-controls">
+                    <div class="input-wrap">
+                        <label>Your Name</label>
+                        <input type="text" id="live-name-input" placeholder="e.g. KOHLI" maxlength="12">
+                    </div>
+                    <div class="input-wrap">
+                        <label>Your Number</label>
+                        <input type="number" id="live-number-input" placeholder="18" min="0" max="99">
+                    </div>
+                    <div class="toggle-wrap">
+                        <label>Add Gold Badge (+₹50)</label>
+                        <input type="checkbox" id="badge-toggle">
+                    </div>
+                </div>
+                
+                <div class="live-preview-box">
+                    <div class="jersey-mockup">
+                        <div class="mockup-name" id="mockup-name">NAME</div>
+                        <div class="mockup-number" id="mockup-number">00</div>
+                        <div class="mockup-badge" id="mockup-badge">★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. VISUAL SHOWCASE (HORIZONTAL SCROLL) -->
+    <section class="gallery-section">
+        <div class="gallery-track">
+            <div class="gallery-item">
+                <img src="assets/hero_jersey_1777633598053.png" alt="Gallery 1">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/showcase_jersey_back_1777633704738.png" alt="Gallery 2">
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. PRODUCT DETAILS (MINIMAL GRID) -->
+    <section class="specs-section">
+        <div class="specs-container">
+            <h2 class="section-heading" data-reveal>The Details</h2>
+            <div class="specs-grid">
+                <div class="spec-item" data-reveal>
+                    <i data-lucide="droplets"></i>
+                    <h4>Moisture-Wicking</h4>
+                    <p>Advanced poly-blend actively repels sweat.</p>
+                </div>
+                <div class="spec-item" data-reveal>
+                    <i data-lucide="wind"></i>
+                    <h4>Breathable</h4>
+                    <p>Targeted mesh panels in high-heat zones.</p>
+                </div>
+                <div class="spec-item" data-reveal>
+                    <i data-lucide="shield"></i>
+                    <h4>Durable</h4>
+                    <p>Reinforced stitching built for contact sports.</p>
+                </div>
+                <div class="spec-item" data-reveal>
+                    <i data-lucide="sun"></i>
+                    <h4>UV Protection</h4>
+                    <p>UPF 30+ shield against harsh sunlight.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FINAL IMPACT SECTION -->
+    <section class="impact-section">
+        <div class="impact-bg"></div>
+        <h1 class="impact-text" data-reveal>Play Bold.<br>Wear Gold.</h1>
+    </section>
+
+    <!-- 10. CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content" data-reveal>
+                <h2>Ready to dominate?</h2>
+                <div class="options-row">
+                    <select class="minimal-select">
+                        <option value="">Select Size</option>
+                        <option value="S">Small (38)</option>
+                        <option value="M">Medium (40)</option>
+                        <option value="L">Large (42)</option>
+                        <option value="XL">X-Large (44)</option>
+                    </select>
+                    <select class="minimal-select">
+                        <option value="1">Qty: 1</option>
+                        <option value="2">Qty: 2</option>
+                        <option value="3">Qty: 3</option>
+                    </select>
+                </div>
+                <button class="primary-btn">Add to Bag - ₹599</button>
+                <p class="cta-note">Free shipping on orders over ₹999.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="minimal-footer">
+        <p>This is an original Sheinic design concept. Not affiliated with official governing bodies.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
